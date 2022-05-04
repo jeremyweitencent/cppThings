@@ -3,4 +3,4 @@ project(cppthings)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(cppthings main.cpp)
+add_executable(cppthings main.cpp vtable/vtable_main.cpp)
