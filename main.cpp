@@ -1,32 +1,42 @@
 #include <iostream>
 #include <fstream>
+#include "static/static_main.h"
+#include "string_test/string_main.h"
 
 // https://github.com/Light-City/CPlusPlusThings
 
 extern void vtable_main();
+void static_main();
 
+struct st {
+    int aa;
+    ~ st() {
+        printf("st de");
+    };
+};
 
 int main() {
 //    vtable_main();
-//    std::cout << "plz input" << std::endl;
-//    int a;
-//    std::string s;
-//    std::cin >> a >> s;
-//    std::cout << "a is " << a << " s is: " << s << std::endl;
-    std::ifstream is("../text.txt");
-//    int v;
-//    is >> v;
-//    std::cout << "v is " << v << std::endl;
-    if (is.is_open()) {
-        while (!is.eof()) {
-            char str[256];
-            std::string str2;
-            getline(is, str2);
-            std::cout << std::setw(20) << std::left  <<
-            std::setfill('*') << std::setfill('0') <<
-            str2 << std::endl;
-        }
-    }
+//    static_main();
+//    static_foo_in_h();
+
+//    int a = 1;
+//    {
+//        int a = 2;
+//        std::cout << "value in block is " << a <<std::endl;
+//        {
+//            int a = 3;
+//        }
+//    }
+
+//    std::cout << "value out block is " << a <<std::endl;
+
+    // int a = 1;
+    // {
+    //     st _st{};
+    // }
+
+    string_main();
 
     return 0;
 }
