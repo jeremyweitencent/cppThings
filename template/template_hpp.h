@@ -111,4 +111,6 @@ static inline void SFINAE_TEST<int>(const int& t) {
   std::cout << "SFINAE_TEST int version invoked." << std::endl;
 }
 
+//todo CRTP 实现
+
 #endif //CPPTHINGS_TEMPLATE_TEMPLATE_HPP_H_
