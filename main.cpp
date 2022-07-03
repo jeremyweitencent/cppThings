@@ -5,6 +5,7 @@
 #include "string_test/string_main.h"
 #include "template/template_hpp.h"
 #include "desgin_patterns/creates/singleton.h"
+#include "marco/marco_hpp.h"
 
 // https://github.com/Light-City/CPlusPlusThings
 
@@ -59,7 +60,7 @@ struct Node {
 
 int main() {
 
-  singleton_test();
+  marco_test_main();
 
   SFINAE_TEST(1);
   SFINAE_TEST(People<Node>());
