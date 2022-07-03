@@ -111,6 +111,16 @@ static inline void SFINAE_TEST<int>(const int& t) {
   std::cout << "SFINAE_TEST int version invoked." << std::endl;
 }
 
+template <typename T, typename index>
+auto authAndAcess(T &t, index i) -> decltype(t[i]) {
+  return t[i];
+}
+
+// 结合 decltype 可以让IDE显示类型的名称
+// TestType<decltype<whatever_xxx>> type_xxx;
+template <typename T>
+struct TestType;
+
 //todo CRTP 实现
 
 #endif //CPPTHINGS_TEMPLATE_TEMPLATE_HPP_H_

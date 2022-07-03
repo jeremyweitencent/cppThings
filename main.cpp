@@ -62,6 +62,8 @@ int main() {
 
   marco_test_main();
 
+//  TestType<decltype(Node())> aType;
+
   SFINAE_TEST(1);
   SFINAE_TEST(People<Node>());
 
