@@ -7,6 +7,7 @@
 #define CPPTHINGS_TEMPLATE_TEMPLATE_HPP_H_
 
 #include <iostream>
+#include <list>
 
 // 模板限定-只有当std::enable_if<?>中的表达式为true是，才有type字段，否则编译出错
 //template<typename T, typename = typename std::enable_if<std::is_pod<T>::value>::type>
@@ -120,6 +121,14 @@ auto authAndAcess(T &t, index i) -> decltype(t[i]) {
 // TestType<decltype<whatever_xxx>> type_xxx;
 template <typename T>
 struct TestType;
+
+template <typename T>
+void test_foo(const T& t);
+
+//使用using 语句，可以直接做模板类型做重命名，但是typedef不行
+template <typename T>
+using MyAllocType = std::list<T>;
+MyAllocType<int> typeList;
 
 //todo CRTP 实现
 

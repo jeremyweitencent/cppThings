@@ -61,6 +61,7 @@ struct Node {
 int main() {
 
   marco_test_main();
+  test_foo(1);
 
 //  TestType<decltype(Node())> aType;
 
