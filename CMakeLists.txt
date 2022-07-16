@@ -14,5 +14,6 @@ add_executable(cppthings main.cpp
         string_test/string_main.cpp
         template/template_hpp.h
         marco/marco_hpp.h
-        template/template_cpp.cpp)
+        template/template_cpp.cpp
+        bits/bits_main.cpp)
 #        static/static_main.h)

@@ -11,6 +11,7 @@
 
 extern void vtable_main();
 void static_main();
+extern void bits_test_main();
 
 struct st {
   int aa;
@@ -60,13 +61,15 @@ struct Node {
 
 int main() {
 
-  marco_test_main();
-  test_foo(1);
+  bits_test_main();
+
+  // marco_test_main();
+  // test_foo(1);
 
 //  TestType<decltype(Node())> aType;
 
-  SFINAE_TEST(1);
-  SFINAE_TEST(People<Node>());
+  // SFINAE_TEST(1);
+  // SFINAE_TEST(People<Node>());
 
 //  float a = GetValue<float>(0);
 

@@ -125,10 +125,15 @@ struct TestType;
 template <typename T>
 void test_foo(const T& t);
 
+template <typename T, typename... Args>
+std::unique_ptr<T> make_unique(Args&&... args) {
+  return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
+}
+
 //使用using 语句，可以直接做模板类型做重命名，但是typedef不行
 template <typename T>
 using MyAllocType = std::list<T>;
-MyAllocType<int> typeList;
+//MyAllocType<int> typeList;
 
 //todo CRTP 实现
 
