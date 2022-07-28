@@ -12,6 +12,7 @@
 extern void vtable_main();
 void static_main();
 extern void bits_test_main();
+extern void algorithms_main();
 
 struct st {
   int aa;
@@ -61,7 +62,9 @@ struct Node {
 
 int main() {
 
-  bits_test_main();
+    algorithms_main();
+
+//  bits_test_main();
 
   // marco_test_main();
   // test_foo(1);

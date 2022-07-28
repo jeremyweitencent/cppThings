@@ -6,14 +6,22 @@ set(CMAKE_CXX_STANDARD 11)
 # Root path
 set(PROJECT_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR})
 
-include_directories(${CMAKE_CURRENT_LIST_DIR}/desgin_patterns)
+include_directories(
+        desgin_patterns/behavior
+        desgin_patterns/creates
+        desgin_patterns/struct
+        )
 
-add_executable(cppthings main.cpp
-        vtable/vtable_main.cpp
-        static/static_main.cpp
-        string_test/string_main.cpp
-        template/template_hpp.h
-        marco/marco_hpp.h
-        template/template_cpp.cpp
-        bits/bits_main.cpp)
-#        static/static_main.h)
+file(GLOB_RECURSE SRC_DIR_LIST
+        "vtable/*.cpp"
+        "static/*.cpp"
+        "string_test/*.cpp"
+        "template/*.cpp"
+        "bits/*.cpp"
+        "algorithms/*.cpp"
+        )
+
+add_executable(cppthings
+        main.cpp
+        ${SRC_DIR_LIST}
+)
